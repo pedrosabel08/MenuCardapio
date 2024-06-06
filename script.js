@@ -15,8 +15,8 @@ let cart = [];
 
 // Abrir o modal do carrinho
 cartBtn.addEventListener("click", function () {
-    cartModal.style.display = "flex"
     updateCartModal();
+    cartModal.style.display = "flex"
 })
 
 // Fechar o modal quando clicar fora
@@ -59,7 +59,7 @@ function addToCart(name, price) {
             quantity: 1,
         })
     }
-    updateCartModal
+    updateCartModal();
 }
 
 // Atualiza carrinho
@@ -98,7 +98,7 @@ function updateCartModal() {
         currency: "BRL"
     });
 
-    cartCounter.innerText = cart.length;
+    cartCounter.innerHTML = cart.length;
 
 }
 
